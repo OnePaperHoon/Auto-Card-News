@@ -22,6 +22,15 @@ Before producing content, read and apply:
 
 If the user explicitly mentions `$auto-card-news`, `$auto-motion-news`, `VibeVoice`, `스킬 2`, `채널`, or asks to make AI/news/tool content for the channel, treat this skill as the top-level quality gate.
 
+## Style Preset Selection
+
+Before designing, check `carousel-workspace/styles/STYLES.md` (style preset registry) if it exists in the workspace.
+
+- Default: use the active channel profile's default style declared in `carousel-workspace/profiles/<channel>/design.md`.
+- Override: if the user names a preset or uses a keyword ("다크로", "라이트로", "<preset> 스타일로"), use that preset instead.
+- Each preset provides a `styles/<preset>/style.css` starting stylesheet; copy or adapt it into the project as `style.css` and keep brand-invariant rules (brandmark placement, footer layout, fonts-in-project) unchanged.
+- If the registry does not exist, fall back to the channel profile's `channel.css`/`design.md`.
+
 ## Channel Positioning
 
 채널 is not a generic AI news repost account. It should feel like a friendly Korean tutor/curator who finds minor-but-useful AI tools, explains them without translationese, and gradually builds trust as an AX consultant.
