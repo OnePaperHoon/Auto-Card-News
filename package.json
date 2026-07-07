@@ -1,0 +1,38 @@
+{
+  "name": "auto-card-news",
+  "version": "0.5.1",
+  "description": "Auto Card News — Agent Skills for Codex and Claude Code, with an interactive setup CLI.",
+  "type": "module",
+  "bin": {
+    "auto-card-news": "cli/index.mjs"
+  },
+  "scripts": {
+    "cli": "node cli/index.mjs",
+    "setup": "node cli/index.mjs",
+    "list": "node cli/index.mjs --list",
+    "test": "python -m unittest tests.test_auto_card_news_skill -v"
+  },
+  "files": [
+    "cli",
+    "skills",
+    "docs",
+    "examples",
+    "README.md",
+    "VERSION"
+  ],
+  "keywords": [
+    "claude-code",
+    "codex",
+    "agent-skills",
+    "mcp",
+    "card-news",
+    "instagram",
+    "reels",
+    "korean",
+    "ai-content"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  }
+}
